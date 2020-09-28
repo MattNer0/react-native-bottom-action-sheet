@@ -101,6 +101,7 @@ class GridView extends PureComponent {
         items.push({
           title: item.props.title,
           icon: item.props.icon,
+          value: item.props.value,
           divider: false
         });
       });
@@ -120,7 +121,7 @@ class Item extends PureComponent { }
 Item.propTypes = {
   title: PropTypes.string,
   divider: PropTypes.bool,
-
+  value: PropTypes.string,
   icon: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
@@ -130,6 +131,7 @@ Item.propTypes = {
 
 Item.defaultProps = {
   title: "",
+  value: "",
   divider: false
 };
 

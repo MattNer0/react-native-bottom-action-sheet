@@ -115,6 +115,7 @@ class SheetView extends PureComponent {
             title: item.props.title,
             subTitle: item.props.subTitle,
             icon: item.props.icon,
+            value: item.props.value,
             divider: item.props.divider === undefined ? '' : item.props.divider
           })
         }
@@ -135,7 +136,7 @@ Item.propTypes = {
   title: PropTypes.string,
   subTitle: PropTypes.string,
   divider: PropTypes.bool,
-
+  value: PropTypes.string,
   icon: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
@@ -146,6 +147,7 @@ Item.propTypes = {
 Item.defaultProps = {
   title: '',
   subTitle: '',
+  value: "",
   divider: false
 }
 
